@@ -66,31 +66,33 @@ while True:
 
     if A == 1:
         print('A pressed')
-        drone.throttle(1)
+        drone.throttle(0.4)
 
     if Y == 1:
         print('Y pressed')
-        drone.throttle(-1)
+        drone.throttle(-0.4)
 
     if X == 1:
         print('X pressed')
-        drone.roll(-1)
+        drone.roll(-0.4)
 
     if B == 1:
         print('B pressed')
-        drone.roll(1)
+        drone.roll(0.4)
 
     if LB == 1 and RB == 1:
-        drone.pitch(-1)
+        drone.pitch(-0.4)
 
-    if leftsticky == 1 and rightsticky == -1:
-        drone.yaw(1)
+    if leftsticky > 0.75 and rightsticky > -0.75:
+        drone.yaw(0.4)
 
-    if leftsticky == -1 and rightsticky == 1:
-        drone.yaw(-1)
+    elif leftsticky > -0.75 and rightsticky > 0.75:
+        drone.yaw(-0.4)
+    else:
+        drone.yaw(0)
 
-    if RT == 1 and LT == 1:
-        drone.pitch(1)
+    if RT > 0.75 and LT > 0.75:
+        drone.pitch(0.4)
 
     sleep(.02)
 

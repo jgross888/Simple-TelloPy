@@ -8,7 +8,6 @@ up
 down
 clockwise
 counter_clockwise
-
 Created for Tech Garage
 """
 
@@ -24,6 +23,6 @@ drone.takeoff()
 drone.sleep(2)
 drone.up(40)
 drone.sleep(2)
-drone.right(122)
+drone.right(30)
 drone.sleep(2)
 drone.land()
